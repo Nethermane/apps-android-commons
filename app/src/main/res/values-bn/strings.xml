@@ -7,7 +7,7 @@
   <string name="login">প্রবেশ</string>
   <string name="signup">নিবন্ধন</string>
   <string name="logging_in_title">প্রবেশ হচ্ছে</string>
-  <string name="logging_in_message">অনুগ্রহ করে অপেক্ষা করুন...</string>
+  <string name="logging_in_message">অনুগ্রহ করে অপেক্ষা করুন…</string>
   <string name="login_success">প্রবেশ সফল!</string>
   <string name="login_failed">প্রবেশ ব্যর্থ :(</string>
   <string name="upload_failed">ফাইল পাওয়া যায়নি। আরেকটি ফাইল চেষ্টা করুন।</string>
