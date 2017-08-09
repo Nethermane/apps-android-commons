@@ -145,7 +145,7 @@ public class CommonsApplication extends Application {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(
                 CommonsApplication.getInstance());
         // Increase counter by one, starts from 1
-        prefs.edit().putInt("app_start_counter", prefs.getInt("app_start_counter" ,0) + 1).commit();
+        prefs.edit().putInt("app_start_counter", prefs.getInt("app_start_counter" ,0) + 1).apply();
 
         //For caching area -> categories
         cacheData  = new CacheController();
@@ -209,11 +209,11 @@ public class CommonsApplication extends Application {
         }
 
         //TODO: fix preference manager 
-        PreferenceManager.getDefaultSharedPreferences(getInstance()).edit().clear().commit();
+        PreferenceManager.getDefaultSharedPreferences(getInstance()).edit().clear().apply();
         SharedPreferences preferences = context
                 .getSharedPreferences("fr.free.nrw.commons", MODE_PRIVATE);
-        preferences.edit().clear().commit();
-        context.getSharedPreferences("prefs", Context.MODE_PRIVATE).edit().clear().commit();
+        preferences.edit().clear().apply();
+        context.getSharedPreferences("prefs", Context.MODE_PRIVATE).edit().clear().apply();
         preferences.edit().putBoolean("firstrun", false).apply();
         updateAllDatabases();
         currentAccount = null;

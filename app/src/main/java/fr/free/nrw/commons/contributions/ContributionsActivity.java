@@ -390,7 +390,7 @@ public  class       ContributionsActivity
                                     .getString(R.string.feedback_page_url)));
                             startActivity(browserIntent);
                             // No need to dislay this window to the user again.
-                            prefs.edit().putBoolean("display_feedbak_popup" , false).commit();
+                            prefs.edit().putBoolean("display_feedbak_popup" , false).apply();
                             dialog.dismiss();
                         }
                     })
@@ -399,7 +399,7 @@ public  class       ContributionsActivity
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             // Dismiss the dialog and not to show it later
-                            prefs.edit().putBoolean("display_feedbak_popup", false).commit();
+                            prefs.edit().putBoolean("display_feedbak_popup", false).apply();
                             dialog.dismiss();
                         }
                     })
