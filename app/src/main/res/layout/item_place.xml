@@ -1,66 +1,54 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:foreground="?attr/selectableItemBackground"
     android:layout_height="@dimen/icon_size"
-    >
+    android:foreground="?attr/selectableItemBackground">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="@dimen/icon_size"
         android:layout_height="match_parent"
-        >
+        android:background="#ffffff"
+        android:contentDescription="@string/no_image_found"
+        android:scaleType="centerCrop"
+        android:src="@drawable/empty_photo" />
 
-        <ImageView
-            android:id="@+id/icon"
-            android:layout_width="@dimen/icon_size"
-            android:layout_height="match_parent"
-            android:src="@drawable/empty_photo"
-            android:background="#ffffff"
-            android:scaleType="centerCrop"
-            android:contentDescription="@string/no_image_found"
-            />
+    <TextView
+        android:id="@+id/distance"
+        style="?android:textAppearanceSmallInverse"
+        android:layout_width="@dimen/icon_size"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/icon"
+        android:background="@color/text_background"
+        android:gravity="center"
+        android:padding="@dimen/tiny_margin"
+        android:textColor="#ffffff"
+        tools:text="@string/placeholder_place_distance" />
 
-        <TextView
-            android:id="@+id/distance"
-            android:layout_width="@dimen/icon_size"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/icon"
-            android:gravity="center"
-            android:padding="@dimen/tiny_margin"
-            style="?android:textAppearanceSmallInverse"
-            android:textColor="#ffffff"
-            android:background="@color/text_background"
-            tools:text="@string/placeholder_place_distance"
-            />
+    <TextView
+        android:id="@+id/tvName"
+        style="?android:textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/icon"
+        android:layout_toRightOf="@+id/icon"
+        android:ellipsize="none"
+        android:maxLines="2"
+        android:paddingLeft="@dimen/small_margin"
+        android:paddingRight="@dimen/small_margin"
+        android:paddingTop="@dimen/small_margin"
+        tools:text="@string/placeholder_place_name" />
 
-        <TextView
-            android:id="@+id/tvName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/icon"
-            android:layout_toRightOf="@+id/icon"
-            android:paddingTop="@dimen/small_margin"
-            android:paddingLeft="@dimen/small_margin"
-            android:paddingRight="@dimen/small_margin"
-            android:maxLines="2"
-            android:ellipsize="none"
-            style="?android:textAppearanceMedium"
-            tools:text="@string/placeholder_place_name"
-            />
-
-        <TextView
-            android:id="@+id/tvDesc"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/icon"
-            android:layout_toRightOf="@+id/icon"
-            android:layout_below="@+id/tvName"
-            android:padding="@dimen/small_margin"
-            android:ellipsize="none"
-            android:maxLines="4"
-            style="?android:textAppearanceSmall"
-            tools:text="@string/placeholder_place_description"
-            />
-
-    </RelativeLayout>
-</FrameLayout>
+    <TextView
+        android:id="@+id/tvDesc"
+        style="?android:textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvName"
+        android:layout_toEndOf="@+id/icon"
+        android:layout_toRightOf="@+id/icon"
+        android:ellipsize="none"
+        android:maxLines="4"
+        android:padding="@dimen/small_margin"
+        tools:text="@string/placeholder_place_description" />
+</RelativeLayout>
