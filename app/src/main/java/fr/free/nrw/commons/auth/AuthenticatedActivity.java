@@ -12,7 +12,6 @@ import java.io.IOException;
 
 import fr.free.nrw.commons.CommonsApplication;
 import fr.free.nrw.commons.theme.NavigationBaseActivity;
-import timber.log.Timber;
 
 public abstract class AuthenticatedActivity extends NavigationBaseActivity {
 
